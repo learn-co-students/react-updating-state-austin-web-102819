@@ -12,8 +12,8 @@ export default class ClickityClick extends Component {
   }
 
   hanldeClick = () => {
-    this.setState({
-      hasBeenClicked: true
+    this.setState(previousState => {
+      return { hasBeenClicked: !previousState.hasBeenClicked };
     });
   };
 
